@@ -1,4 +1,4 @@
-import Categories from './components/Categories/Categories'
+import Categories from './components/Categories/Categories';
 
 const App = () => {
   const categories = [
@@ -27,11 +27,11 @@ const App = () => {
       title: 'mens',
       imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
     }
-  ]
+  ];
 
   return (
-    <Categories  categories={categories} />
-  )
-}
+    <Categories categories={categories} />
+  );
+};
 
-export default App
+export default App;

@@ -1,7 +1,7 @@
-import './Category.scss'
+import './Category.scss';
 
 const CategoryItem = ({ category }) => {
-  const { title, imageUrl } = category
+  const { title, imageUrl } = category;
 
   return (
     <div className='category-container'>
@@ -14,7 +14,7 @@ const CategoryItem = ({ category }) => {
         <p>Shop Now</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CategoryItem
+export default CategoryItem;

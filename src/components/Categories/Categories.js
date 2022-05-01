@@ -1,5 +1,5 @@
-import './Categories.scss'
-import Category from '../Category/Category'
+import './Categories.scss';
+import Category from '../Category/Category';
 
 const Categories = ({ categories }) => {
   return (
@@ -8,7 +8,7 @@ const Categories = ({ categories }) => {
         <Category key={category.id} category={category} />
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default Categories
+export default Categories;
