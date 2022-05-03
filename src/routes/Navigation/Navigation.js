@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import { signOutUser } from '../../utils/firebase/firebase';
 import { ReactComponent as Logo } from '../../assets/crown.svg';
-import { UserContext } from '../../contexts/user';
+import { UserContext } from '../../contexts/user.context';
 import './Navigation.scss';
 
 const Navigation = () => {
