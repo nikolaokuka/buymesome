@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 
 import ProductCard from '../../components/ProductCard/ProductCard.component';
 import { CategoryTitle, CategoryContainer } from './Category.styles';
-import { selectCategories } from '../../store/user/categories/categories.selectors';
+import { selectCategories } from '../../store/categories/categories.selectors';
 
 const Category = () => {
   const { category } = useParams();
