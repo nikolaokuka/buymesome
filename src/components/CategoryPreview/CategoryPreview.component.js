@@ -1,4 +1,5 @@
 import ProductCard from '../ProductCard/ProductCard.component';
+
 import {
   CategoryPreviewContainer,
   Title,
