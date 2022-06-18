@@ -1,4 +1,5 @@
-import { CartActionTypes } from './cart.types';
+import { CART_ACTION_TYPES } from './cart.types';
+import { createAction } from '../../utils/reducer/reducer.utils';
 
 const addCartItem = (cartItems, itemToAdd) => {
   const existingCartItem = cartItems.find((cartItem) => cartItem.id === itemToAdd.id);
@@ -36,31 +37,31 @@ const clearCartItem = (cartItems, itemToClear) => {
   return cartItems.filter((cartItem) => cartItem.id !== itemToClear.id);
 };
 
-export const setIsCartOpen = (boolean) => ({
-  type: CartActionTypes.SET_IS_CART_OPEN,
-  payload: boolean,
-});
+export const setIsCartOpen = (boolean) => createAction(
+  CART_ACTION_TYPES.SET_IS_CART_OPEN,
+  boolean
+);
 
 export const addItemToCart = (cartItems, productToAdd) => {
   const newCartItems = addCartItem(cartItems, productToAdd);
-  return {
-    type: CartActionTypes.SET_CART_ITEMS,
-    payload: newCartItems,
-  };
+  return createAction(
+    CART_ACTION_TYPES.SET_CART_ITEMS,
+    newCartItems
+  );
 };
 
 export const removeItemFromCart = (cartItems, itemToRemove) => {
   const newCartItems = removeCartItem(cartItems, itemToRemove);
-  return {
-    type: CartActionTypes.SET_CART_ITEMS,
-    payload: newCartItems,
-  };
+  return createAction(
+    CART_ACTION_TYPES.SET_CART_ITEMS,
+    newCartItems
+  );
 };
 
 export const clearItemFromCart = (cartItems, itemToClear) => {
   const newCartItems = clearCartItem(cartItems, itemToClear);
-  return {
-    type: CartActionTypes.SET_CART_ITEMS,
-    payload: newCartItems,
-  };
+  return createAction(
+    CART_ACTION_TYPES.SET_CART_ITEMS,
+    newCartItems
+  );
 };
