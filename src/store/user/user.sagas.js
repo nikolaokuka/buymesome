@@ -1,6 +1,6 @@
 import { all, call, put, takeLatest } from 'redux-saga/effects';
 
-import { UserActionTypes } from './user.types';
+import { USER_ACTION_TYPES } from './user.types';
 
 import {
   signInSuccess,
@@ -81,27 +81,27 @@ function* isUserAuthenticated() {
 }
 
 function* onSignUpStart() {
-  yield takeLatest(UserActionTypes.SIGN_UP_START, signUp);
+  yield takeLatest(USER_ACTION_TYPES.SIGN_UP_START, signUp);
 }
 
 function* onSignUpSuccess() {
-  yield takeLatest(UserActionTypes.SIGN_UP_SUCCESS, signInAfterSignUp);
+  yield takeLatest(USER_ACTION_TYPES.SIGN_UP_SUCCESS, signInAfterSignUp);
 }
 
 function* onGoogleSignInStart() {
-  yield takeLatest(UserActionTypes.GOOGLE_SIGN_IN_START, signInWithGoogle);
+  yield takeLatest(USER_ACTION_TYPES.GOOGLE_SIGN_IN_START, signInWithGoogle);
 }
 
 function* onEmailSignInStart() {
-  yield takeLatest(UserActionTypes.EMAIL_SIGN_IN_START, signInWithEmail);
+  yield takeLatest(USER_ACTION_TYPES.EMAIL_SIGN_IN_START, signInWithEmail);
 }
 
 function* onCheckUserSession() {
-  yield takeLatest(UserActionTypes.CHECK_USER_SESSION, isUserAuthenticated);
+  yield takeLatest(USER_ACTION_TYPES.CHECK_USER_SESSION, isUserAuthenticated);
 }
 
 function* onSignOutStart() {
-  yield takeLatest(UserActionTypes.SIGN_OUT_START, signOut);
+  yield takeLatest(USER_ACTION_TYPES.SIGN_OUT_START, signOut);
 }
 
 export function* userSaga() {
