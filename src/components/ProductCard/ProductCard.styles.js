@@ -10,7 +10,7 @@ export const ProductCardContainer = styled.div`
 
   img {
     width: 100%;
-    height: 95%;
+    height: 90%;
     object-fit: cover;
     margin-bottom: 5px;
   }
@@ -19,7 +19,7 @@ export const ProductCardContainer = styled.div`
     width: 80%;
     opacity: 0.7;
     position: absolute;
-    top: 255px;
+    top: 245px;
     display: none;
   }
 
