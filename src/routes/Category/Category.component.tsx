@@ -9,8 +9,12 @@ import { selectCategories, selectCategoriesIsLoading } from '../../store/categor
 
 import { CategoryTitle, CategoryContainer } from './Category.styles';
 
+type CategoryRouteParams = {
+  category: string;
+};
+
 const Category = () => {
-  const { category } = useParams();
+  const { category } = useParams<keyof CategoryRouteParams>() as CategoryRouteParams;
   const categories = useSelector(selectCategories);
   const isLoading = useSelector(selectCategoriesIsLoading);
   const [products, setProducts] = useState(categories[category]);
@@ -25,13 +29,13 @@ const Category = () => {
       {isLoading
         ? <Spinner />
         : <CategoryContainer>
-            {products && products.map((product) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-              />
-            ))}
-          </CategoryContainer>
+          {products && products.map((product) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+            />
+          ))}
+        </CategoryContainer>
       }
     </>
   );
