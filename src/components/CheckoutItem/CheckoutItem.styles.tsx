@@ -29,7 +29,11 @@ export const Quantity = styled(BaseSpan)`
   display: flex;
 `;
 
-export const Arrow = styled.div`
+type ArrowProps = {
+  left?: boolean;
+};
+
+export const Arrow = styled.div<ArrowProps>`
   cursor: pointer;
   margin-left: ${({ left }) => left && '5px'};
 `;
