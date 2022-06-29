@@ -19,21 +19,11 @@ const Checkout = () => {
   return (
     <CheckoutContainer>
       <CheckoutHeader>
-        <HeaderBlock>
-          <span>Product</span>
-        </HeaderBlock>
-        <HeaderBlock>
-          <span>Description</span>
-        </HeaderBlock>
-        <HeaderBlock>
-          <span>Quantity</span>
-        </HeaderBlock>
-        <HeaderBlock>
-          <span>Price</span>
-        </HeaderBlock>
-        <HeaderBlock>
-          <span>Remove</span>
-        </HeaderBlock>
+        <HeaderBlock>Product</HeaderBlock>
+        <HeaderBlock>Description</HeaderBlock>
+        <HeaderBlock>Quantity</HeaderBlock>
+        <HeaderBlock span='span 4'>Price</HeaderBlock>
+        <HeaderBlock span='span 5'>Remove</HeaderBlock>
       </CheckoutHeader>
       {cartItems.map((cartItem) => (
         <CheckoutItem

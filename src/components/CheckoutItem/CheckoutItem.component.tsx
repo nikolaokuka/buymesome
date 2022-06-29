@@ -45,8 +45,8 @@ const CheckoutItem: FC<CheckoutItemProps> = ({ cartItem }) => {
           &#10095;
         </Arrow>
       </Quantity>
-      <BaseSpan>${price}</BaseSpan>
-      <RemoveButton onClick={clearItemHandler}>
+      <BaseSpan span='span 4'>${price}</BaseSpan>
+      <RemoveButton onClick={clearItemHandler} span='span 5'>
         &#10005;
       </RemoveButton>
     </CheckoutItemContainer>

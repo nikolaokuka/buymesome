@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import { SpinnerContainer } from '../Spinner/Spinner.styles';
 
 export const BaseButton = styled.button`
-  min-width: 165px;
-  width: auto;
+  width: 160px;
   height: 50px;
   letter-spacing: 0.5px;
   line-height: 50px;
@@ -25,6 +24,14 @@ export const BaseButton = styled.button`
     color: black;
     border: 1px solid black;
   }
+
+  @media screen and (max-width: 930px) {
+    margin-bottom: 10px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 export const GoogleSignInButton = styled(BaseButton)`
@@ -34,6 +41,10 @@ export const GoogleSignInButton = styled(BaseButton)`
     background-color: #357ae8;
     border: none;
     color: white;
+  }
+
+  @media screen and (max-width: 500px) {
+    margin-top: 10px;
   }
 `;
 
